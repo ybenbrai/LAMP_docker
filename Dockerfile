@@ -4,7 +4,7 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install git -y\
 	&& apt install apache2 -y \
 	&& apt install mysql-server -y \
 	&& apt install php -y \
-	&& apt -y -qq install php7.2 libapache2-mod-php7.2 php-mysql \
+	&& apt -y -qq install php libapache2-mod-php php-mysql \
 	&& service mysql start \
 	&& echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'root';FLUSH PRIVILEGES;" > file.txt \
 	&& mysql -u root < file.txt \
